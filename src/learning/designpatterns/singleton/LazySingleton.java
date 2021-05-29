@@ -12,7 +12,7 @@ package learning.designpatterns.singleton;
 
 
 public class LazySingleton {
-    private static LazySingleton lazySingleton;
+    private static volatile LazySingleton lazySingleton;
 
     private LazySingleton() {
 
