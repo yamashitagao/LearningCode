@@ -9,23 +9,23 @@ package learning.designpatterns.strategy.tank;
 
 public class Bullet {
     String bulletType ;
-    Tank tank;
     int damage , deep;
+    int base_reload_time;
 
-    public Bullet(String bulletType, Tank tank, int damage, int deep) {
+    public Bullet(String bulletType, int damage, int deep, int base_reload_time) {
         this.bulletType = bulletType;
-        this.tank = tank;
         this.damage = damage;
         this.deep = deep;
+        this.base_reload_time = base_reload_time;
     }
 
     @Override
     public String toString() {
         return "Bullet{" +
                 "bulletType='" + bulletType + '\'' +
-                ", tank=" + tank +
                 ", damage=" + damage +
                 ", deep=" + deep +
+                ", base_reload_time=" + base_reload_time +
                 '}';
     }
 }
