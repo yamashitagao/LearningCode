@@ -1,4 +1,4 @@
-package learning.designpatterns.datastructure;
+package learning.datastructure;
 
 
 /**
