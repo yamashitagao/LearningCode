@@ -1,9 +1,9 @@
-package learning.designpatterns.Factory.modelFactory.modelFactoryImp;
+package learning.designpatterns.factory.modelFactory.modelFactoryImp;
 
-import learning.designpatterns.Factory.modelFactory.AbstractFactory;
-import learning.designpatterns.Factory.modelFactory.Food;
-import learning.designpatterns.Factory.modelFactory.Vehicle;
-import learning.designpatterns.Factory.modelFactory.Weapon;
+import learning.designpatterns.factory.modelFactory.AbstractFactory;
+import learning.designpatterns.factory.modelFactory.Food;
+import learning.designpatterns.factory.modelFactory.Vehicle;
+import learning.designpatterns.factory.modelFactory.Weapon;
 
 /**
  * @description

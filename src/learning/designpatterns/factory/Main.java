@@ -1,7 +1,7 @@
-package learning.designpatterns.Factory;
+package learning.designpatterns.factory;
 
-import learning.designpatterns.Factory.modelFactory.AbstractFactory;
-import learning.designpatterns.Factory.modelFactory.modelFactoryImp.HunmanbehaveFactory;
+import learning.designpatterns.factory.modelFactory.AbstractFactory;
+import learning.designpatterns.factory.modelFactory.modelFactoryImp.HunmanbehaveFactory;
 
 /**
  * @description

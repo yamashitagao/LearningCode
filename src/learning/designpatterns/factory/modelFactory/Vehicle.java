@@ -1,4 +1,4 @@
-package learning.designpatterns.Factory.modelFactory;
+package learning.designpatterns.factory.modelFactory;
 
 /**
  * @description

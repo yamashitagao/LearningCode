@@ -1,6 +1,6 @@
-package learning.designpatterns.Factory.modelFactory.modelFactoryImp;
+package learning.designpatterns.factory.modelFactory.modelFactoryImp;
 
-import learning.designpatterns.Factory.modelFactory.Weapon;
+import learning.designpatterns.factory.modelFactory.Weapon;
 
 /**
  * @description

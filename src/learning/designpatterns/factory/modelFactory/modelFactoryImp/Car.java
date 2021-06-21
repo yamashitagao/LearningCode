@@ -1,7 +1,7 @@
-package learning.designpatterns.Factory.modelFactory.modelFactoryImp;
+package learning.designpatterns.factory.modelFactory.modelFactoryImp;
 
 
-import learning.designpatterns.Factory.modelFactory.Vehicle;
+import learning.designpatterns.factory.modelFactory.Vehicle;
 
 /**
  * @description
