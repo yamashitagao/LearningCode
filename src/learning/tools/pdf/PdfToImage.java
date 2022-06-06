@@ -1,14 +1,12 @@
-package learning.pdf;
+package learning.tools.pdf;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.poi.hslf.usermodel.HSLFSlideShow;
 import org.apache.poi.sl.usermodel.SlideShow;
 import org.apache.poi.xslf.usermodel.*;
-import sun.misc.GC;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
@@ -16,6 +14,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -190,6 +189,7 @@ public class PdfToImage {
                 _imgRGB = buffer.getRGB(0, 0, width, _height, _imgRGB, 0, width);
                 imgRGB.add(_imgRGB);
             }
+            System.gc();
             _height = 0; // 设置偏移高度为0
             // 生成新图片
             BufferedImage imageResult = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -206,23 +206,34 @@ public class PdfToImage {
     }
 
     public static void main(String[] args) {
-        String path = "D:\\DevCode\\Buss\\材料\\syt资料\\企业文化月刊-文化天地-9月刊.pptx";
-//        List<String> strings = pdfToImagePath(path);
-        String image = "D:\\DevCode\\Buss\\材料\\syt资料\\企业文化月刊-文化天地-9月刊";
-        File f = new File(image);
-        File file = new File(path);
-        if (!f.exists()) {
-            f.mkdir();
-        }
+//        String path = "D:\\DevCode\\Buss\\材料\\syt资料\\企业文化月刊-文化天地-9月刊.pptx";
+////        List<String> strings = pdfToImagePath(path);
+//        String image = "D:\\DevCode\\Buss\\材料\\syt资料\\企业文化月刊-文化天地-9月刊";
+//        File f = new File(image);
+//        File file = new File(path);
+//        if (!f.exists()) {
+//            f.mkdir();
+//        }
+//        List<String> imagePath = new ArrayList<>();
+//        doPPT2007toImage(file, f, imagePath);
+//        for (String p :
+//                imagePath) {
+//            System.out.println(p);
+//        }
+//        long tempTime = System.currentTimeMillis();
+
+        File file = new File("D:\\DevCode\\Buss\\材料\\syt资料\\文化天地-5月刊");
+        File[] files = file.listFiles();
         List<String> imagePath = new ArrayList<>();
-        doPPT2007toImage(file, f, imagePath);
-        for (String p :
-                imagePath) {
-            System.out.println(p);
+        for (File f :
+                files) {
+            System.out.println(f.getPath());
+            imagePath.add(f.getPath());
         }
-        long tempTime = System.currentTimeMillis();
-        yPic(imagePath, "D:\\DevCode\\Buss\\材料\\syt资料\\企业文化月刊-文化天地-9月刊\\long.jpg");
-        System.out.println("step2:" + (System.currentTimeMillis() - tempTime));
+
+        yPic(imagePath, "D:\\DevCode\\Buss\\材料\\syt资料\\企业文化月刊-文化天地-12月刊-图片\\20211224.jpg");
+//        System.out.println("step2:" + (System.currentTimeMillis() - tempTime));
+
     }
 
 }
